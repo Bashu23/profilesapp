@@ -1,13 +1,12 @@
 import { defineFunction } from '@aws-amplify/backend';
-import { type ClientSchema, a, defineData } from "@aws-amplify/backend";
-import { postConfirmation } from "/Users/ashwinibhandari/profilesapp/amplify/auth/post-confirmation/resource.ts";
 
-// Define the post-confirmation function
 export const postConfirmation = defineFunction({
   name: 'post-confirmation',
 });
 
-// Define the schema and authorization
+import { type ClientSchema, a, defineData } from "@aws-amplify/backend";
+import { postConfirmation } from "../auth/post-confirmation/resource";
+
 const schema = a
   .schema({
     UserProfile: a
@@ -20,10 +19,8 @@ const schema = a
       ]),
   })
   .authorization((allow) => [allow.resource(postConfirmation)]);
-
 export type Schema = ClientSchema<typeof schema>;
 
-// Define data with authorization modes
 export const data = defineData({
   schema,
   authorizationModes: {
