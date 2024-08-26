@@ -9,7 +9,7 @@ export const postConfirmation = defineFunction({
 // /Users/ashwinibhandari/profilesapp/amplify/data/resource.ts
 
 import { type ClientSchema, a, defineData } from "@aws-amplify/backend";
-import { postConfirmation } from "/Users/ashwinibhandari/profilesapp/amplify/auth/post-confirmation/resource.ts";  // Full path to the resource file
+import { postConfirmation } from "../auth/post-confirmation/resource"; // Correct relative path
 
 const schema = a
   .schema({
@@ -35,4 +35,3 @@ export const data = defineData({
     },
   },
 });
-
