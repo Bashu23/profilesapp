@@ -28,7 +28,7 @@
   },
   "include": [
     "amplify/**/*.ts",
-    "src/**/*.ts",
+    "data/**/*.ts",
     "profilesapp/**/*.ts"
   ]
 }
