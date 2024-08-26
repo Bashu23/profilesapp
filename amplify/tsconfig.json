@@ -1,4 +1,4 @@
-{{
+{
   "compilerOptions": {
     "target": "es2022",
     "module": "es2022",
@@ -28,6 +28,7 @@
   },
   "include": [
     "amplify/**/*.ts",
-    "src/**/*.ts"
+    "src/**/*.ts",
+    "profilesapp/**/*.ts"
   ]
 }
