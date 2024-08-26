@@ -27,7 +27,7 @@
     "useUnknownInCatchVariables": true
   },
   "include": [
-    "amplify/**/**/*.ts",
+    "amplify/**/*.ts",
     "src/**/*.ts",
     "profilesapp/**/*.ts"
   ]
