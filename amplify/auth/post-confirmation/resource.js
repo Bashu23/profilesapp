@@ -1,15 +1,16 @@
 "use strict";
-// /Users/ashwinibhandari/profilesapp/amplify/auth/post-confirmation/resource.ts
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.data = exports.postConfirmation = void 0;
+// Import necessary modules
 var backend_1 = require("@aws-amplify/backend");
 // Define and export the postConfirmation function
 exports.postConfirmation = (0, backend_1.defineFunction)({
     name: 'post-confirmation',
 });
-// /Users/ashwinibhandari/profilesapp/amplify/data/resource.ts
+// Then, in other files, import it as needed:
+var resource_1 = require("../auth/post-confirmation/resource");
+// Define your schema
 var backend_2 = require("@aws-amplify/backend");
-var resource_1 = require("../auth/post-confirmation/resource"); // Full path to the resource file
 var schema = backend_2.a
     .schema({
     UserProfile: backend_2.a
@@ -31,3 +32,6 @@ exports.data = (0, backend_2.defineData)({
         },
     },
 });
+
+
+  
