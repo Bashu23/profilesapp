@@ -1,11 +1,16 @@
+// Import necessary modules
 import { defineFunction } from '@aws-amplify/backend';
 
+// Define and export the postConfirmation function
 export const postConfirmation = defineFunction({
   name: 'post-confirmation',
 });
 
+// Then, in other files, import it as needed:
+import { postConfirmation } from '../auth/post-confirmation/resource';
+
+// Define your schema
 import { type ClientSchema, a, defineData } from "@aws-amplify/backend";
-import { postConfirmation } from "../auth/post-confirmation/resource";
 
 const schema = a
   .schema({
@@ -19,6 +24,7 @@ const schema = a
       ]),
   })
   .authorization((allow) => [allow.resource(postConfirmation)]);
+
 export type Schema = ClientSchema<typeof schema>;
 
 export const data = defineData({
