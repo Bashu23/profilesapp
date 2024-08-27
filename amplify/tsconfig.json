@@ -29,6 +29,7 @@
   "include": [
     "amplify/**/*.ts",
     "data/**/*.ts",
+    "src/**/*",
     "profilesapp/**/*.ts"
   ],
   "exclude": [
@@ -36,3 +37,4 @@
     "**/*.spec.ts"
   ]
 }
+
